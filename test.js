@@ -92,7 +92,7 @@ const createImg = (countryName, abb) => {
     } else console.log(abb, "something went wrong");
 };
 
-*/
+
 const cardContainer = document.querySelector(".card-container");
 const countryObject = {
     url: "",
@@ -146,3 +146,28 @@ function showCard(countryObject) {
     div.innerHTML = child;
     cardContainer.append(div);
 }
+
+
+disabling input field untill the pervious command is loaded --> diff
+
+
+
+
+
+
+
+
+
+.spinner .spinner-1 {
+  animation: fade 1.1s ease-in-out 0.18s infinite both;
+}
+.spinner .spinner-2 {
+  animation: fade 1.1s ease-in-out 0.36s infinite both;
+}
+.spinner .spinner-3 {
+  animation: fade 1.1s ease-in-out 0.54s infinite both;
+}
+
+
+
+*/
