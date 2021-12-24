@@ -11,5 +11,24 @@
 }
 
 img {
-    width: 10%;
+    width: 50px;
+    height: 100px;
+    object-fit: cover;
+    background-color: black;
+}
+
+.notification {
+    height: 50px;
+}
+
+.normal {
+    color: blue;
+}
+
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
 }

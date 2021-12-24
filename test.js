@@ -65,7 +65,7 @@ const createImg = (abb) => {
         document.querySelector(".card-container").append(div);
     } else console.log(abb, "something went wrong");
 };
-*/
+
 /// abb - flag
 
 const apiUrl = "https://covid-api.mmediagroup.fr/v1/cases";
@@ -91,3 +91,58 @@ const createImg = (countryName, abb) => {
         document.querySelector(".card-container").append(div);
     } else console.log(abb, "something went wrong");
 };
+
+*/
+const cardContainer = document.querySelector(".card-container");
+const countryObject = {
+    url: "",
+    abb: "",
+    country: "inida",
+    confirmedCases: 55,
+    deaths: 56,
+    recoveredCases: 78,
+};
+console.log(countryObject);
+
+const url = `https://flagcdn.com/h240/${countryObject.abb.toLowerCase()}.png`;
+
+fetch(url)
+    .catch((error) => console.log(error))
+
+.then((response) => response.blob())
+    .then((imageBlob) => {
+        // Then create a local URL for that image and print it
+        const imageObjectURL = URL.createObjectURL(imageBlob);
+        countryObject.url = imageObjectURL;
+        showCard(countryObject);
+    });
+
+function showCard(countryObject) {
+    const url = `${countryObject.url}`;
+    let child = `  
+        <div class="img">
+                <img src="${url}" alt="">
+        </div>
+        <div class="country">
+                <span>Country</span>
+                 <span>${countryObject.country}</span>
+        </div>
+        <div class="confirmed">
+                 <span>Confirmed Cases</span>
+                 <span>${countryObject.confirmedCases}</span>
+        </div>
+        <div class="recovered">
+                 <span>Recovered Cases</span>
+                 <span>${countryObject.recoveredCases}</span>
+        </div>
+        <div class="deaths">
+                  <span>Deaths</span>
+                  <span>${countryObject.deaths}</span>
+        </div>
+     `;
+
+    const div = document.createElement("div");
+    div.className = "card";
+    div.innerHTML = child;
+    cardContainer.append(div);
+}
