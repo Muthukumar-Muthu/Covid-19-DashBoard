@@ -130,6 +130,7 @@ const clearInput = () => {
 function checkCountry(country) {
     let bool = false;
     if (countryList.indexOf(country) !== -1) {
+        //checking whether the country name is presented in api
         bool = true;
         console.log(`${country} is valid Country name`);
     } else {
@@ -138,12 +139,13 @@ function checkCountry(country) {
         );
 
         notify(
-            "Invalid country name! \nChecking the spelling or some other error occured",
+            "Invalid country name!  Checking the spelling or some other error occured",
             "red",
             "auto"
         );
     }
     if (recentCountryList.indexOf(country) !== -1) {
+        //checking whether the country name is already presented or not
         console.log(country, " presented already"); //add notification
         notify(`${country} exists already`, "red", "auto");
         bool = false;
@@ -169,7 +171,7 @@ const createOption = (countryList) => {
 };
 
 async function showCard(countryObject) {
-    await fetch(`https://flagcdn.com/h240/${countryObject.abb.toLowerCase()}.png`)
+    await fetch(`https://flagcdn.com/${countryObject.abb.toLowerCase()}.svg`)
         .then((response) => response.blob())
         .then((imageBlob) => {
             // Then create a local URL for that image and print it
@@ -184,13 +186,14 @@ async function showCard(countryObject) {
             console.log(error); //add notification
         });
     notify(`added ${countryObject.country}`, "green", "auto");
+
     let child = `  
+        <span class="remove-container"><i class="fas fa-trash remove"></i></span>
         <div class="img">
                 <img src="${countryObject.url}" alt="">
-                 <span class="remove">X</span>
+                
         </div>
         <div class="country">
-                <span>Country</span>
                  <span>${countryObject.country}</span>
         </div>
         <div class="confirmed">

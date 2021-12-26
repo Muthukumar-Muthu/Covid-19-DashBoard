@@ -7,24 +7,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Covid 19 Dashboard</title>
     <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
-    <form action="">
-        <input list="country">
-        <datalist id="country">
-        </datalist>
-        <button type="submit">Submit</button>
-    </form>
-    <div class="notification">loading...</div>
-
-    <div class="card-container">
+    <div class="overall-container">
+        <div class="title">
+            <h1>COVID 19 Dashboard</h1>
+            <div>get Your country stats</div>
+        </div>
+        <form action="">
+            <input list="country" placeholder="Your country here..">
+            <datalist id="country">
+            </datalist>
+            <button type="submit">Add country</button>
+        </form>
+        <div class="notification">Loading...</div>
+        <div class="card-container">
+        </div>
+        <div class="remove-all"><span>REMOVE ALL</span><i class="fas fa-trash "></i></div>
     </div>
-    <div class="remove-all">X</div>
     <script src="script.js"></script>
     <!-- <script src="test.js"></script> -->
+
 </body>
 
 </html>
