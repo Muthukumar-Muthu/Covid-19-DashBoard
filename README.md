@@ -1,5 +1,7 @@
 # Covid-19-DashBoard
 
+https://muthukumar-muthu.github.io/Covid-19-DashBoard/ - live demo
+
 Why did I choose to build this project ?
 
 When I decided to start working on this project I had just finished learning about Promises, async...await, APIs and error handling. So I decided to use the concepts to build project. So decided to work with Api, fetch, Promise, async etc.,
