@@ -1,3 +1,7 @@
+body {
+    height: 100vh;
+}
+
 body,
 .overall-container {
     display: grid;
@@ -10,6 +14,7 @@ body,
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     padding: 20px;
+    border-radius: 20px;
 }
 
 .title {
@@ -23,8 +28,9 @@ body,
 .title div {
     text-align: center;
     text-transform: capitalize;
-    color: red;
-    font-size: smaller;
+    color: rgb(35, 185, 223);
+    font-size: large;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 input::placeholder,
@@ -251,4 +257,25 @@ img {
 
 .green {
     color: green;
+}
+
+.social {
+    display: flex;
+    justify-content: space-around;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+}
+
+.social i {
+    color: rgb(11, 102, 114);
+    font-size: 2rem;
+    padding-inline: 10px;
+    transition: all 0.2s linear;
+}
+
+.social i:hover {
+    color: rgb(52, 134, 145);
 }
