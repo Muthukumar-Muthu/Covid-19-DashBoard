@@ -1,12 +1,8 @@
 # Covid-19-DashBoard
 
-Why did I choose to build this project? 🤔
+Why did I choose to build this project?
 
-This project was one of my favourite tools for breaking my way out of tutorial hell 👹. I also wanted this project to serve me as a display of my JavaScript skills to potential employers or collaborators.
-
-By the time I decided to start working on this project I had just finished learning about Promises, async...await, APIs and error handling. I wanted to code a project to implement all of this knowledge, also include that project in my portfolio, and keep sharpening my design and coding skills
-
-Finally, I also wanted to continue experimenting with the whole process of building a website from scratch.
+When I decided to start working on this project I had just finished learning about Promises, async...await, APIs and error handling. So I decided to use the concepts to build project. So decided to work with Api, fetch, Promise, async etc.,
 
 Choosing the APIs
 
