@@ -1,3 +1,7 @@
+html {
+    font-size: 67.5%;
+}
+
 body {
     height: 100vh;
 }
@@ -118,7 +122,6 @@ i {
 .card {
     margin: 10px;
     border-radius: 15px;
-    /* border: thin solid red; */
     position: relative;
     z-index: 5;
     transition: all 0.2s linear;
@@ -129,12 +132,6 @@ i {
 .card:hover>* {
     padding-inline: 20px;
 }
-
-
-/* .card-container {
-            border: thin solid red;
-        }
-         */
 
 .img {
     height: 150px;
@@ -297,5 +294,19 @@ footer {
         display: grid;
         grid-template-columns: repeat(1, auto);
         place-items: center;
+    }
+    body {
+        font-size: 1rem;
+    }
+    *,
+    .notification {
+        padding: 5px;
+        margin: 0;
+    }
+    input {
+        width: 90%;
+    }
+    form {
+        width: 90%;
     }
 }

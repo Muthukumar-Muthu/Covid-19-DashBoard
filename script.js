@@ -135,14 +135,10 @@ function checkCountry(country) {
         console.log(`${country} is valid Country name`);
     } else {
         console.log(
-            "Invalid country name! \nChecking the spelling or some other error occured" //add notification
+            "Invalid country name!" //add notification
         );
 
-        notify(
-            "Invalid country name!  Checking the spelling or some other error occured",
-            "red",
-            "auto"
-        );
+        notify("Invalid country name!", "red", "auto");
     }
     if (recentCountryList.indexOf(country) !== -1) {
         //checking whether the country name is already presented or not
